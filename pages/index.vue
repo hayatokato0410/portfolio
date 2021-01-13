@@ -1,12 +1,6 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
-      <h1 class="title">
-        Hayato Kato
-      </h1>
-      <div class="links">
-      </div>
     </div>
   </div>
 </template>
