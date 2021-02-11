@@ -17,9 +17,10 @@
 </template>
 <style lang="scss" scoped>
 .globalNavigation {
-font-family: 'Inter';
- width: 100vw;
- height: auto;
+    display: flex;
+    font-family: 'Inter';
+    width: 100vw;
+    height: auto;
 }
  .globalNavigation_inner {
      width: $Sp-width;

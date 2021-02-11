@@ -19,7 +19,7 @@ export default {
     font-family: 'butler';
     text-align: left;
     &__number{
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 6px;
     }
     &__title{
