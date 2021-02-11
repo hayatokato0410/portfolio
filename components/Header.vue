@@ -3,12 +3,11 @@
     <nav class="globalNavigation">
         <div class="globalNavigation_inner">
             <div class="logo">
-                <img src="" alt="">
-                HAYATO KATO
+                <nuxt-link to="/">HAYATO KATO</nuxt-link>
             </div>
             <div class="menu">
-                <nuxt-link to="/">WORKS</nuxt-link>
-                <nuxt-link to="/works">ABOUT</nuxt-link>
+                <nuxt-link to="/works">WORKS</nuxt-link>
+                <nuxt-link to="/about">ABOUT</nuxt-link>
                 <nuxt-link to="/contact">CONTACT</nuxt-link>
             </div>
         </div>
@@ -31,7 +30,7 @@ font-family: 'Inter';
      justify-content: space-between;
  }
  .logo{
-     font-weight: 600;
+     font-weight: 700;
      width: 30vw;
      height: auto;
      font-size: 12px;

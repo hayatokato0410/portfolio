@@ -1,9 +1,13 @@
 <template>
   <div class="container">
-    <div class="top"><span></span></div>
+    <div class="top">
+      <p>HAYATO</p>
+      <p>KATO</p>
+    </div>
     <div class="Works">
       <SectionTitle />
       <div class="WorksCards">
+          <Card />
           <Card />
           <Card />
       </div>
@@ -31,6 +35,11 @@ export default {
 }
 .top{
   height: 100vh;
-  width: 100vw;
+  width: $Sp-width;
+  margin: 20vh auto 0;
+  p{
+    font-family: 'butler';
+    font-size: 60px;
+  }
 }
 </style>

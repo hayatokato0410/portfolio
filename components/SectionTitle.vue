@@ -18,6 +18,7 @@ export default {
     border-bottom: 1px solid #000;
     padding-bottom: 20px;
     p{
+        font-family: Inter;
         font-weight: 700;
         text-align: left;
         font-size: 12px;

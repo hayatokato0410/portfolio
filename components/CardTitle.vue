@@ -20,14 +20,13 @@ export default {
     text-align: left;
     &__number{
         font-size: 12px;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
     }
     &__title{
         font-size: 40px;
-        margin-bottom: 4px;
     }
     &__category{
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 
