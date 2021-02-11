@@ -1,7 +1,6 @@
 <template>
   <div>
     <Header />
-    <Nuxt />
   </div>
 </template>
 
@@ -18,6 +17,7 @@ export default {
 html {
   font-family:
     'butler',
+    'Inter'
     'Source Sans Pro',
     -apple-system,
     BlinkMacSystemFont,
@@ -33,7 +33,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background-color: #F1E9E2;
 }
 
 *,
@@ -41,8 +40,8 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+  background-color: $Bg-color;
 }
-
 .button--green {
   display: inline-block;
   border-radius: 4px;

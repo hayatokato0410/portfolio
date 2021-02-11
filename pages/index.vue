@@ -1,21 +1,36 @@
 <template>
   <div class="container">
-    <div>
+    <div class="top"><span></span></div>
+    <div class="Works">
+      <SectionTitle />
+      <div class="WorksCards">
+          <Card />
+          <Card />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import Card from '~/components/Card'
+import SectionTitle from '~/components/SectionTitle'
+export default {
+  components: {
+    Card,
+    SectionTitle
+  },
+}
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  height: auto;
+  display: block;
+}
+.top{
+  height: 100vh;
+  width: 100vw;
 }
 </style>

@@ -18,12 +18,12 @@
 </template>
 <style lang="scss" scoped>
 .globalNavigation {
+font-family: 'Inter';
  width: 100vw;
  height: auto;
- background: white;
 }
  .globalNavigation_inner {
-     width: calc(100vw - 40px);
+     width: $Sp-width;
      height: auto;
      margin: 0 auto ;
      padding-top: 20px;
@@ -31,11 +31,13 @@
      justify-content: space-between;
  }
  .logo{
+     font-weight: 600;
      width: 30vw;
      height: auto;
      font-size: 12px;
  }
  .menu{
+     font-weight: 500;
      width: 50vw;
      height: auto;
      display: flex;

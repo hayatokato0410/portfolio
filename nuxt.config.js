@@ -30,10 +30,21 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    'nuxt-webfontloader',
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    scss: [
+      '~assets/css/variable.scss'
+    ]
+  },
+  webfontloader: {
+    google: {
+      families: ['Inter:500,600,700']
+    }
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
 }
-
