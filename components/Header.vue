@@ -17,7 +17,7 @@
 </template>
 <style lang="scss" scoped>
 .globalNavigation {
-    display: flex;
+    position: fixed;
     font-family: 'Inter';
     width: 100vw;
     height: auto;

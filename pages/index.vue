@@ -36,7 +36,8 @@ export default {
 .top{
   height: 100vh;
   width: $Sp-width;
-  margin: 20vh auto 0;
+  margin: 0 auto;
+  padding-top: 20vh;
   p{
     font-family: 'butler';
     font-size: 60px;
