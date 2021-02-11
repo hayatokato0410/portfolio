@@ -27,6 +27,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+html{
+  background-color: $Bg-color;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -37,7 +40,7 @@ export default {
   height: 100vh;
   width: $Sp-width;
   margin: 0 auto;
-  padding-top: 20vh;
+  padding-top: 30vh;
   p{
     font-family: 'butler';
     font-size: 60px;

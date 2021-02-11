@@ -42,6 +42,7 @@ html {
   margin: 0;
   background-color: $Bg-color;
 }
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
