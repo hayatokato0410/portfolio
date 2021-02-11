@@ -36,7 +36,7 @@
      font-size: 12px;
  }
  .menu{
-     width: calc(((100vw - 40px) /10) * 5);
+     width: 50vw;
      height: auto;
      display: flex;
      justify-content: space-between;
