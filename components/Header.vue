@@ -7,37 +7,43 @@
                 HAYATO KATO
             </div>
             <div class="menu">
-                <nuxt-link to="/">Home</nuxt-link>
-                <nuxt-link to="/works">Works</nuxt-link>
-                <nuxt-link to="/contact">Contact</nuxt-link>
+                <nuxt-link to="/">WORKS</nuxt-link>
+                <nuxt-link to="/works">ABOUT</nuxt-link>
+                <nuxt-link to="/contact">CONTACT</nuxt-link>
             </div>
         </div>
     </nav>
     <Nuxt />
   </div>
 </template>
-<style>
+<style lang="scss" scoped>
 .globalNavigation {
- width: 100%;
- height: 50px;
- background: lightgray;
+ width: 100vw;
+ height: auto;
+ background: white;
 }
  .globalNavigation_inner {
-     width: 80vw;
-     height: 50px;
-     margin: 0 auto;
+     width: calc(100vw - 40px);
+     height: auto;
+     margin: 0 auto ;
+     padding-top: 20px;
      display: flex;
      justify-content: space-between;
  }
  .logo{
      width: 30vw;
      height: auto;
+     font-size: 12px;
  }
  .menu{
-     width: 20vw;
+     width: calc(((100vw - 40px) /10) * 5);
      height: auto;
      display: flex;
      justify-content: space-between;
-     color: black;
+     a{
+         font-size: 12px;
+         text-decoration: none;
+         color: black;
+     }
  }
 </style>

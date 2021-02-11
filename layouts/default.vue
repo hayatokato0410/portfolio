@@ -1,22 +1,23 @@
 <template>
   <div>
-    <NavBar />
+    <Header />
     <Nuxt />
   </div>
 </template>
 
 <script>
-import NavBar from '@/components/navbar.vue';
+import Header from '@/components/Header.vue';
 export default {
   components:{
-    NavBar,
+    Header,
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 html {
   font-family:
+    'butler',
     'Source Sans Pro',
     -apple-system,
     BlinkMacSystemFont,
