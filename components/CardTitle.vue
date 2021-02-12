@@ -8,14 +8,13 @@
 
 <script>
 export default {
-  name: 'CardTitle', // ここは外部をコンポーネントとして呼ぶ名前になる
 }
 </script>
 
 <style lang="scss" scoped>
 .WorksTitle{
     width: $Sp-width;
-    margin: 36px auto 20px auto;
+    margin: 24px auto 20px auto;
     font-family: 'butler';
     text-align: left;
     &__number{

@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  name: 'SectionTitle', // ここは外部をコンポーネントとして呼ぶ名前になる
 }
 </script>
 

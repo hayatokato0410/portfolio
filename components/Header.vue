@@ -1,51 +1,38 @@
 <template>
-  <div>
-    <nav class="globalNavigation">
-        <div class="globalNavigation_inner">
-            <div class="logo">
-                <nuxt-link to="/">HAYATO KATO</nuxt-link>
-            </div>
-            <div class="menu">
-                <nuxt-link to="/works">WORKS</nuxt-link>
-                <nuxt-link to="/about">ABOUT</nuxt-link>
-                <nuxt-link to="/contact">CONTACT</nuxt-link>
-            </div>
+    <header class="header">
+        <div class="logo">
+            <nuxt-link to="/">HAYATO KATO</nuxt-link>
         </div>
-    </nav>
-    <Nuxt />
-  </div>
+        <nav class="globalNavigation">
+            <nuxt-link to="/">menu</nuxt-link>
+        </nav>
+    </header>
 </template>
+
 <style lang="scss" scoped>
-.globalNavigation {
+.header{
     position: fixed;
     font-family: 'Inter';
-    width: 100vw;
+    width: $Sp-width;
     height: auto;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    .logo{
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: 12px;
+    }
+    .globalNavigation{
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        a{
+            font-size: 12px;
+            text-decoration: none;
+            color: black;
+        }
+    }
 }
- .globalNavigation_inner {
-     width: $Sp-width;
-     height: auto;
-     margin: 0 auto ;
-     padding-top: 20px;
-     display: flex;
-     justify-content: space-between;
- }
- .logo{
-     font-weight: 700;
-     width: 30vw;
-     height: auto;
-     font-size: 12px;
- }
- .menu{
-     font-weight: 500;
-     width: 50vw;
-     height: auto;
-     display: flex;
-     justify-content: space-between;
-     a{
-         font-size: 12px;
-         text-decoration: none;
-         color: black;
-     }
- }
+
 </style>

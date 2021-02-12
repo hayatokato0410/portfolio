@@ -8,14 +8,8 @@
 </template>
 
 <script>
-import CardTitle from '~/components/CardTitle.vue'  // 原子をimport
 
 export default {
-  name: 'Card', // この分子の外部を呼ぶ際の名前
-
-  components: {
-    CardTitle // 原子をcomponentとして使う宣言
-  }
 }
 </script>
 
@@ -28,7 +22,7 @@ export default {
     margin: 0 auto;
 
     .WorkImage{
-        height: 380px;
+        height: $Sp-width;
         width: $Sp-width;
         margin: 0 auto;
         background: white;

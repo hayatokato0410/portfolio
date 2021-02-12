@@ -4,26 +4,24 @@
       <p>HAYATO</p>
       <p>KATO</p>
     </div>
-    <div class="Works">
+    <section class="Works">
       <SectionTitle />
       <div class="WorksCards">
           <Card />
           <Card />
           <Card />
       </div>
-    </div>
+    </section>
+    <section class="About">
+      <SectionTitle />
+      <div class="WorksCards">
+          <Card />
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import Card from '~/components/Card'
-import SectionTitle from '~/components/SectionTitle'
-export default {
-  components: {
-    Card,
-    SectionTitle
-  },
-}
 </script>
 
 <style lang="scss" scoped>
@@ -45,5 +43,8 @@ html{
     font-family: 'butler';
     font-size: 60px;
   }
+}
+section{
+  margin-top: 160px;
 }
 </style>
