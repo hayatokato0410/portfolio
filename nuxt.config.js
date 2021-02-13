@@ -8,9 +8,6 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
-    script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js', async: true, defer: true, body: true }
-    ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -47,5 +44,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    transpile: ['gsap']
   }
 }
