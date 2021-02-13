@@ -19,24 +19,24 @@ export default {
     scrollItemH2() {
       gsap.to('.sectionTitle', { // 動かしたい要素は".a"
         width: 'calc(100vw - 40px)',// 右方向に500動く
-        duration: 0.8, // アニメーションは1秒間
-        ease: "power2.out",
+        duration: 1, // アニメーションは1秒間
+        ease: "expo.out",
         scrollTrigger: {
           trigger: '.sectionTitle', // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: 'bottom bottom', // アニメーション開始位置
-          markers: true // マーカー表示
+          start: 'top 80%', // アニメーション開始位置
+          markers: false // マーカー表示
         }
       })
     },
     scrollItemUnderLine() {
       gsap.to('h2 span', { // 動かしたい要素は".a"
         y: 0,// 右方向に500動く
-        duration: 0.5, // アニメーションは1秒間
-        ease: "power2.out",
+        duration: 1, // アニメーションは1秒間
+        ease: "expo.out",
         scrollTrigger: {
           trigger: '.sectionTitle', // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: 'bottom bottom', // アニメーション開始位置
-          markers: true // マーカー表示
+          start: 'top 80%', // アニメーション開始位置
+          markers: false // マーカー表示
         }
       })
     },
@@ -46,7 +46,7 @@ export default {
 
 <style lang="scss" scoped>
 .sectionTitle{
-    width: 10px;
+    width: 0px;
     height: auto;
     margin-left: 20px;
     border-bottom: 1px solid #000;
