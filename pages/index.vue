@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <main class="container">
     <div class="top">
       <p>HAYATO</p>
       <p>KATO</p>
     </div>
-    <section class="Works">
+    <section class="works" id="fade">
       <SectionTitle />
       <div class="WorksCards">
           <Card />
@@ -12,16 +12,17 @@
           <Card />
       </div>
     </section>
-    <section class="About">
+    <section class="about">
       <SectionTitle />
-      <div class="WorksCards">
-          <Card />
+      <div class="worksCards">
+        <Card />
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <script>
+TweenMax.fromTo('.top',1,{opacity:'0%'},{opacity:'100%'});
 </script>
 
 <style lang="scss" scoped>
