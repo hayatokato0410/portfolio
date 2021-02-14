@@ -9,7 +9,7 @@
     font-size: 12px;
     text-align: center;
     font-family: 'Inter';
-    font-weight: 700;
+    font-weight: 500;
     margin: 60px auto 0 auto;
     padding-bottom: 20px;
 }

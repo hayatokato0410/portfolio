@@ -6,12 +6,12 @@
         <p><span class="textFadeIn">KATO</span></p>
       </h1>
     </div>
-    <section class="work">
+    <section class="work" ref="work">
       <h2>WORK</h2>
       <ul class="workContainer">
         <li class="workTitle" v-for="content in contents" :key="content.id">
           <nuxt-link :to="`/${content.id}`">
-            <div class="workTitle__number">0{{ content.number }}</div>
+            <div class="workTitle__number">{{ content.number }}</div>
             <h3><div class="workTitle__title">{{ content.title }}</div></h3>
             <!-- <div class="workTitle__category">{{ content.category }}</div> -->
             <div class="workArea"></div>
@@ -102,7 +102,7 @@ html{
         margin-bottom: 8px;
     }
     &__title{
-        font-size: 36px;
+        font-size: 40px;
     }
     &__category{
         font-size: 16px;

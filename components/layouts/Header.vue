@@ -4,7 +4,7 @@
             <nuxt-link to="/">HAYATO KATO</nuxt-link>
         </div>
         <nav class="globalNavigation">
-            <nuxt-link to="/work">WORK</nuxt-link>
+            <nuxt-link to="/">WORK</nuxt-link>
             <nuxt-link to="/about">ABOUT</nuxt-link>
         </nav>
     </header>

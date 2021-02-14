@@ -16,7 +16,8 @@
     "gsap": "^3.6.0",
     "luxy.js": "^0.1.0",
     "nuxt": "^2.14.6",
-    "nuxt-webfontloader": "^1.1.0"
+    "nuxt-webfontloader": "^1.1.0",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
