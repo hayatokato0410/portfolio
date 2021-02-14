@@ -4,7 +4,8 @@
             <nuxt-link to="/">HAYATO KATO</nuxt-link>
         </div>
         <nav class="globalNavigation">
-            <nuxt-link to="/">menu</nuxt-link>
+            <nuxt-link to="/work">WORK</nuxt-link>
+            <nuxt-link to="/about">ABOUT</nuxt-link>
         </nav>
     </header>
 </template>
@@ -25,6 +26,8 @@
     }
     .globalNavigation{
         padding-top: 20px;
+        width: 28vw;
+        height:auto;
         display: flex;
         justify-content: space-between;
         a{
