@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        <small>&copy; 2021 HAYATOKATO</small>
+        <small>&copy; 2021 HAYATO KATO</small>
     </footer>
 </template>
 

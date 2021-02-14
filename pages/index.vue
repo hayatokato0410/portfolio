@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <main class="container" id="luxy">
     <div class="mainContainer">
       <h1>
         <p><span class="textFadeIn">HAYATO</span></p>
@@ -95,14 +95,14 @@ html{
   text-align: left;
   .workTitle{
     border-bottom: 1px solid #000;
-    margin-top: 36px;
+    margin-top: 40px;
     padding-bottom: 40px;
     &__number{
         font-size: 14px;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
     }
     &__title{
-        font-size: 40px;
+        font-size: 36px;
     }
     &__category{
         font-size: 16px;

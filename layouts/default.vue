@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="luxy">
     <Header />
     <Nuxt />
     <Footer />
@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 </script>
 
 <style lang="scss" scoped>
