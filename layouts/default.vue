@@ -36,7 +36,6 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
-  background-color: $Bg-color;
 }
 
 .button--green {
