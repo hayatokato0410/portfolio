@@ -21,7 +21,7 @@
     justify-content: space-between;
     .logo{
         margin-top: 20px;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 12px;
     }
     .globalNavigation{

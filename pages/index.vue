@@ -14,6 +14,7 @@
             <div class="workTitle__number">0{{ content.number }}</div>
             <h3><div class="workTitle__title">{{ content.title }}</div></h3>
             <!-- <div class="workTitle__category">{{ content.category }}</div> -->
+            <div class="workArea"></div>
           </nuxt-link>
         </li>
       </ul>
@@ -95,7 +96,7 @@ html{
   .workTitle{
     border-bottom: 1px solid #000;
     margin-top: 36px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     &__number{
         font-size: 14px;
         margin-bottom: 6px;
@@ -107,6 +108,12 @@ html{
         font-size: 16px;
     }
   }
+  .workArea{
+    margin-top: 20px;
+    height: $Sp-width;
+    width: $Sp-width;
+    background: white;
+  }
 }
 .contactContainer{
   width: $Sp-width;
@@ -114,11 +121,10 @@ html{
   font-family: 'butler';
   text-align: left;
   ul{
-    margin-top: 36px;
     li{
       font-size: 24px;
       border-bottom: 1px solid #000;
-      margin-top: 36px;
+      margin-top: 24px;
       padding-bottom: 20px;
       display: flex;
       justify-content: space-between;
