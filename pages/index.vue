@@ -76,10 +76,9 @@ html{
   height: 100vh;
   width: $Sp-width;
   margin: 0 auto;
-  padding-top: 30vh;
   h1 p{
     font-family: 'butler';
-    font-size: 60px;
+    font-size: 48px;
     // background-color: gray;
     overflow: hidden;
     span{

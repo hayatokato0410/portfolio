@@ -1,5 +1,5 @@
 <template>
-  <div id="luxy">
+  <div class="main">
     <Header />
     <Nuxt />
     <Footer />
@@ -65,5 +65,8 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+.main{
+  background-color: #EDEDED;
 }
 </style>
