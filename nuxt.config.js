@@ -1,6 +1,8 @@
+require('dotenv').config()
+const { API_KEY, baseUrl } = process.env;
+
 export default {
   target: 'static',
-  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'portfolio',
     meta: [
@@ -29,7 +31,8 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     'nuxt-webfontloader',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/dotenv'
   ],
   styleResources: {
     scss: [
@@ -46,4 +49,8 @@ export default {
   build: {
     transpile: ['gsap']
   },
+  env: {
+    API_KEY,
+    baseUrl
+  }
 }

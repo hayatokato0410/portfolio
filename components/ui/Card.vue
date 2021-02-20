@@ -1,72 +1,67 @@
 <template>
-    <div class="container">
-        <div class="workTitle" v-for="content in contents" :key="content.id">
-            <nuxt-link :to="`/${content.id}`">
-                <h3><div class="workTitle__number">{{ content.number }}</div></h3>
-                <div class="workTitle__title">{{ content.title }}</div>
-                <!-- <div class="workTitle__category">{{ content.category }}</div> -->
-            </nuxt-link>
-          </div>
-    </div>
+  <ul class="workContainer">
+    <li class="workTitle">
+      <nuxt-link :to="`/`">
+        <div class="workTitle_number">{{ number }}</div>
+        <div class="workTitle_title">{{ title }}</div>
+        <div class="workTitle_category">{{ category }}</div>
+        <!-- <div class="workTitle_image">{{ image }}</div> -->
+      </nuxt-link>
+    </li>
+  </ul>
 </template>
-
 <script>
 import axios from 'axios'
 export default {
-  async asyncData({ params }) {
+async asyncData() {
     const { data } = await axios.get(
-    'https://hayato_portfolio.microcms.io/api/v1/works',
+    'https://hayato_portfolio.microcms.io/api/v1/works/',
        {
-        headers: { 'X-API-KEY': 'c4c9d84e-ca69-4a71-a4d2-d56d6870d9f7' }
+        headers: { 'X-API-KEY': (process.env.API_KEY) }
       }
     )
     return data
+  },
+  props: {
+    number: {
+      type: String,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    category: {
+      type: String,
+      required: true
+    },
+    // image: {
+    //   type: String,
+    //   required: true
+    // }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-// .container {
-//   margin: 0 auto;
-//   min-height: 100vh;
-//   height: auto;
-//   display: block;
-// }
-// .main{
-//   height: 100vh;
-//   width: $Sp-width;
-//   margin: 0 auto;
-//   padding-top: 30vh;
-//   h1 p{
-//     font-family: 'butler';
-//     font-size: 60px;
-//     // background-color: gray;
-//     overflow: hidden;
-//     span{
-//       display: inline-block;
-//       transform: translateY(100%);
-//    }
-//   }
-// }
-// .work{
-//   width: $Sp-width;
-//   margin: 24px auto 20px auto;
-//   font-family: 'butler';
-//   text-align: left;
-//   border-bottom: 1px solid #000;
-//   padding-bottom: 60px;
-//   .workTitle{
-//     &__number{
-//         font-size: 14px;
-//         margin-bottom: 6px;
-//     }
-//     &__title{
-//         font-size: 40px;
-//     }
-//     &__category{
-//         font-size: 16px;
-//     }
-//   }
-// }
-
+.workContainer{
+  .workTitle{
+    font-family: 'butler-Medium';
+    border-bottom: 1px solid white;
+    margin-top: 40px;
+    padding-bottom: 60px;
+    color: white;
+    &_number{
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    &_title{
+        letter-spacing: 0.05em;
+        font-size: 40px;
+    }
+    &_category{
+        font-size: 16px;
+    }
+  }
+}
 </style>

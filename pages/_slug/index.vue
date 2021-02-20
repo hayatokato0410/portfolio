@@ -3,7 +3,7 @@
     <p class="number">{{ number }}</p>
     <h3 class="title">{{ title }}</h3>
     <!-- <p class="category">{{　category　}}</p> -->
-    <div class="post" v-html="content"></div>
+    <div class="post">{{ content }}</div>
   </main>
 </template>
 
