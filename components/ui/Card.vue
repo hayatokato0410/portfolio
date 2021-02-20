@@ -25,7 +25,7 @@ async asyncData() {
   props: {
     number: {
       type: String,
-      required: true
+      required: true,
     },
     title: {
       type: String,
@@ -35,10 +35,6 @@ async asyncData() {
       type: String,
       required: true
     },
-    // image: {
-    //   type: String,
-    //   required: true
-    // }
   }
 }
 </script>
@@ -54,13 +50,15 @@ async asyncData() {
     &_number{
         font-size: 14px;
         margin-bottom: 4px;
+        font-family: 'butler-Light';
     }
     &_title{
         letter-spacing: 0.05em;
         font-size: 40px;
     }
     &_category{
-        font-size: 16px;
+      font-family: 'butler-Light';
+      font-size: 16px;
     }
   }
 }
