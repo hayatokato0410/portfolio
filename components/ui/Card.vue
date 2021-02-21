@@ -19,7 +19,7 @@ async asyncData() {
     const { data } = await axios.get(
     'https://hayato_portfolio.microcms.io/api/v1/works/',
        {
-        headers: { 'X-API-KEY': process.env.API_KEY }
+        headers: { 'X-API-KEY': (process.env.API_KEY) }
       }
     )
     return data
