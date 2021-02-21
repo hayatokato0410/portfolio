@@ -9,7 +9,20 @@
         </nav>
     </header>
 </template>
-
+<script>
+import axios from 'axios'
+export default {
+async asyncData() {
+    const { data } = await axios.get(
+    'https://hayato_portfolio.microcms.io/api/v1/works',
+       {
+        headers: { 'X-API-KEY': (process.env.API_KEY) }
+      }
+    )
+    return data
+  },
+}
+</script>
 <style lang="scss" scoped>
 .header{
     position: fixed;
