@@ -12,12 +12,12 @@
     <section class="work">
       <h2>work</h2>
       <div class="work_inner">
-        <Card v-for="content in contents"
+        <!-- <Card v-for="content in contents"
           :title="content.title"
           :number="content.number"
           :image="content.image"
           :category="content.category"
-          :key="content.id" />
+          :key="content.id" /> -->
       </div>
     </section>
     <section class="contact">
@@ -36,15 +36,15 @@
 <script>
 import axios from 'axios'
 export default {
-async asyncData() {
-    const { data } = await axios.get(
-    'https://hayato_portfolio.microcms.io/api/v1/works',
-       {
-        headers: { 'X-API-KEY': process.env.API_KEY }
-      }
-    )
-    return data
-  },
+// async asyncData() {
+//     const { data } = await axios.get(
+//     'https://hayato_portfolio.microcms.io/api/v1/works',
+//        {
+//         headers: { 'X-API-KEY': process.env.API_KEY }
+//       }
+//     )
+//     return data
+//   },
 }
 </script>
 
