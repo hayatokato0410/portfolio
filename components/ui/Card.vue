@@ -2,10 +2,12 @@
   <ul class="workContainer">
     <li class="workTitle">
       <nuxt-link :to="`/`">
-        <div class="workTitle_number">{{ number }}</div>
-        <div class="workTitle_title">{{ title }}</div>
+        <div class="workTitle_wrapper">
+          <div class="workTitle_title">{{ title }}</div>
+          <div class="workTitle_number">{{ number }}</div>
+        </div>
         <div class="workTitle_category">{{ category }}</div>
-        <!-- <div class="workTitle_image">{{ image }}</div> -->
+        <img class="thumbnail">
       </nuxt-link>
     </li>
   </ul>
@@ -35,7 +37,7 @@ async asyncData() {
       type: String,
       required: true
     },
-  }
+  },
 }
 </script>
 
@@ -45,20 +47,34 @@ async asyncData() {
     font-family: 'butler-Medium';
     border-bottom: 1px solid white;
     margin-top: 40px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     color: white;
+    &_wrapper{
+      display: flex;
+      width: $Sp-width;
+      height: auto;
+      justify-content: space-between;
+      align-items: center;
+    }
     &_number{
         font-size: 14px;
-        margin-bottom: 4px;
         font-family: 'butler-Light';
     }
     &_title{
         letter-spacing: 0.05em;
         font-size: 40px;
+        margin-bottom: 4px;
     }
     &_category{
       font-family: 'butler-Light';
-      font-size: 16px;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+    & img{
+      margin-top: 20px;
+      width: $Sp-width;
+      height: 60vh;
+      background: white;
     }
   }
 }

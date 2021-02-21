@@ -20,6 +20,16 @@
           :key="content.id" />
       </div>
     </section>
+    <section class="contact">
+      <h2>CONTACT</h2>
+      <div class="contact_inner">
+        <ul class="contactTitle">
+            <a href=""><li class="contactTitle__mail"><p>Mail</p><p><span>hayatokato0410@gmail.com</span></p></li></a>
+            <a href=""><li class="contactTitle__twitter"><p>Twitter</p><p><span>@hayatokato0410</span></p></li></a>
+            <a href=""><li class="contactTitle__instagram"><p>Instagram</p><p><span>@hayatokato0410</span></p></li></a>
+        </ul>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -51,17 +61,18 @@ async asyncData() {
       font-family: 'Inter';
       font-weight: 700;
       text-align: left;
-      font-size: 12px;
+      font-size: 14px;
       border-bottom: 1px solid white;
       padding-bottom: 16px;
       color: white;
     }
 }
 .firstview{
-  height: 100vh;
+  height: 80vh;
   width: $Sp-width;
   margin: 0 auto;
   font-family: 'butler';
+  letter-spacing: 0.05em;
   h1 {
     font-size: 52px
   }
@@ -75,10 +86,31 @@ async asyncData() {
 }
 .work{
   background: #333;
-  padding-top: 40px;
+  padding-top: 60px;
   .work_inner{
     width: $Sp-width;
     margin: 0 auto 160px auto;
+  }
+}
+.contact{
+  width: $Sp-width;
+  margin: 0 auto 20px auto;
+  font-family: 'butler';
+  text-align: left;
+  ul{
+    li{
+      font-size: 24px;
+      border-bottom: 1px solid #000;
+      margin-top: 24px;
+      padding-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      width: $Sp-width;
+      height: auto;
+      span{
+        font-size: 14px;
+      }
+    }
   }
 }
 </style>
