@@ -9,7 +9,7 @@
         I am a web designer and developer. I work in Tokyo. I also take and edit photos and videos. My goal is to build a better society through the power of design.
       </p>
     </section>
-    <!-- <section class="work">
+    <section class="work">
       <h2>work</h2>
       <div class="work_inner">
         <Card v-for="content in contents"
@@ -19,7 +19,7 @@
           :category="content.category"
           :key="content.id" />
       </div>
-    </section> -->
+    </section>
     <section class="contact">
       <h2>CONTACT</h2>
       <div class="contact_inner">
