@@ -31,48 +31,4 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  padding-top: 120px;
-  margin: 0 auto;
-  min-height: 100vh;
-  height: auto;
-  display: block;
-  width: $Sp-width;
-    h2{
-      font-family: 'Inter';
-      font-weight: 700;
-      text-align: left;
-      font-size: 12px;
-      border-bottom: 1px solid #000;
-      padding-bottom: 16px;
-    }
-}
-.aboutContainer{
-  width: $Sp-width;
-  margin: 0 auto 160px auto;
-  font-family: 'butler';
-  text-align: left;
-  .aboutTitle{
-    border-bottom: 1px solid #000;
-    margin-top: 40px;
-    padding-bottom: 40px;
-    &__age{
-        font-size: 14px;
-        margin-bottom: 8px;
-    }
-    &__name{
-        font-size: 40px;
-        margin-bottom: 8px;
-    }
-    &__profile{
-        font-size: 16px;
-    }
-  }
-  .aboutArea{
-    margin-top: 20px;
-    height: $Sp-width;
-    width: $Sp-width;
-    background: white;
-  }
-}
 </style>

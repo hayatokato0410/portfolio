@@ -71,7 +71,7 @@ async asyncData() {
       letter-spacing: 0.05em;
     }
     & img{
-      margin-top: 20px;
+      margin-top: 28px;
       width: $Sp-width;
       height: 60vh;
       background: white;

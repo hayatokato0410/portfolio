@@ -50,6 +50,7 @@ async asyncData() {
 
 <style lang="scss" scoped>
 .container {
+  padding-top: 100px;
   margin: 0 auto;
   min-height: 100vh;
   height: auto;
@@ -89,10 +90,23 @@ async asyncData() {
   padding-top: 60px;
   .work_inner{
     width: $Sp-width;
-    margin: 0 auto 160px auto;
+    margin: 0 auto;
+    padding-bottom: 60px;
   }
 }
 .contact{
+  h2{
+      width: $Sp-width;
+      margin: 0 auto;
+      font-family: 'Inter';
+      font-weight: 700;
+      text-align: left;
+      font-size: 14px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 16px;
+      color: #333;
+    }
+  padding-top: 60px;
   width: $Sp-width;
   margin: 0 auto 20px auto;
   font-family: 'butler';
