@@ -30,6 +30,11 @@
             <a href=""><li class="contactTitle__twitter"><p>Twitter</p><p><span>@hayatokato0410</span></p></li></a>
             <a href=""><li class="contactTitle__instagram"><p>Instagram</p><p><span>@hayatokato0410</span></p></li></a>
         </ul>
+        <div class="marquee-wrap">
+          <ul class="marquee-list">
+            <li class="marquee-item">Get in Touch</li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
@@ -47,17 +52,17 @@ async asyncData() {
     )
     return data
   },
-    mounted: function() {
-    var $allMsg = $('.fadeAnimation');
-    var $wordList = $('.fadeAnimation').html().split("");
-    $('.fadeAnimation').html("");
-    $.each($wordList, function(idx, elem) {
-        var newEL = $("<span/>").text(elem).css({ 'opacity': 0 });
-        newEL.appendTo($allMsg);
-        newEL.delay(idx * 100);
-        newEL.animate({ 'opacity': 1 }, 2000);
-    });
-  }
+  //   mounted: function() {
+  //   var $allMsg = $('.fadeAnimation');
+  //   var $wordList = $('.fadeAnimation').html().split("");
+  //   $('.fadeAnimation').html("");
+  //   $.each($wordList, function(idx, elem) {
+  //       var newEL = $("<span/>").text(elem).css({ 'opacity': 0 });
+  //       newEL.appendTo($allMsg);
+  //       newEL.delay(idx * 100);
+  //       newEL.animate({ 'opacity': 1 }, 2000);
+  //   });
+  // }
 }
 
 </script>
@@ -82,7 +87,7 @@ async asyncData() {
     }
 }
 .firstview{
-  min-height: 82vh;
+  min-height: 90vh;
   width: $Sp-width;
   margin: 0 auto;
   font-family: 'butler';
@@ -135,20 +140,69 @@ async asyncData() {
       color: #333;
       border-bottom: 1px solid #333;
     }
-  ul{
+  .contactTitle{
     li{
-      font-size: 32px;
+      font-size: 28px;
       border-bottom: 1px solid #000;
       margin-top: 32px;
-      padding-bottom: 28px;
+      padding-bottom: 24px;
       display: flex;
       justify-content: space-between;
       width: $Sp-width;
       height: auto;
-      
       span{
         font-size: 14px;
       }
+    }
+  }
+  @keyframes animation-marquee {
+  0% {
+    transform: translate(0%);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
+@-webkit-keyframes animation-marquee {
+  0% {
+    transform: translate(0%);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
+@mixin marquee {
+  animation-name: animation-marquee;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.marquee-wrap {
+  // background: #232323;
+  margin: 30px 0 0 0;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #333;
+    .marquee-list {
+      white-space: nowrap;
+      position: absolute;
+      @include marquee;
+        .marquee-item {
+          font-family: 'butler-Light';
+          display: inline;
+          white-space: nowrap;
+          font-weight: lighter;
+          font-size: 80px;
+          color: #333;
+          padding: 0 60px 0 0;
+            &:first-child {
+              padding: 0 60px 0 100vw;
+            }
+        }
     }
   }
 }
