@@ -1,7 +1,11 @@
 require('dotenv').config()
 const { API_KEY, baseUrl } = process.env;
+const webpack = require('webpack')
 
 export default {
+  server: {
+    host: '0.0.0.0'
+  },
   target: 'static',
   head: {
     title: 'portfolio',
@@ -11,7 +15,6 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
   },
-
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '~/assets/css/style.css',
@@ -47,7 +50,14 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    transpile: ['gsap']
+    transpile: ['gsap'],
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      })
+    ]
   },
   env: {
     API_KEY,

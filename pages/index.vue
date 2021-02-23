@@ -2,12 +2,14 @@
   <main class="container">
     <section class="firstview">
       <h1>
-        <p><span class="textFadeIn">HAYATO</span></p>
-        <p><span class="textFadeIn">KATO</span></p>
+          <p class="fadeAnimation">HAYATO KATO</p>
       </h1>
       <p class="profile">
         I am a web designer and developer. I work in Tokyo. I also take and edit photos and videos. My goal is to build a better society through the power of design.
       </p>
+      <div class="circle">
+      <img src="~/assets/image/circle.svg">
+      </div>
     </section>
     <section class="work">
       <h2>work</h2>
@@ -45,12 +47,23 @@ async asyncData() {
     )
     return data
   },
+    mounted: function() {
+    var $allMsg = $('.fadeAnimation');
+    var $wordList = $('.fadeAnimation').html().split("");
+    $('.fadeAnimation').html("");
+    $.each($wordList, function(idx, elem) {
+        var newEL = $("<span/>").text(elem).css({ 'opacity': 0 });
+        newEL.appendTo($allMsg);
+        newEL.delay(idx * 100);
+        newEL.animate({ 'opacity': 1 }, 2000);
+    });
+  }
 }
+
 </script>
 
 <style lang="scss" scoped>
 .container {
-  padding-top: 100px;
   margin: 0 auto;
   min-height: 100vh;
   height: auto;
@@ -62,20 +75,23 @@ async asyncData() {
       font-family: 'Inter';
       font-weight: 700;
       text-align: left;
-      font-size: 14px;
+      font-size: 16px;
       border-bottom: 1px solid white;
-      padding-bottom: 16px;
+      padding-bottom: 28px;
       color: white;
     }
 }
 .firstview{
-  height: 80vh;
+  height: 85vh;
   width: $Sp-width;
   margin: 0 auto;
   font-family: 'butler';
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   h1 {
-    font-size: 52px
+    padding-top: 12vh;
+    font-size: 52px;
+    p{
+    }
   }
   .profile{
     width: 60vw;
@@ -84,43 +100,51 @@ async asyncData() {
     font-size: 14px;
     opacity: 0.5;
   }
+  .circle{
+    position: absolute;
+    bottom: 10%;
+    right: 20px;
+    animation: rotate_right 8s linear infinite;
+    @keyframes rotate_right {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    img{
+      width: 100px;
+      height: auto;
+    }
+  }
 }
 .work{
   background: #333;
-  padding-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   .work_inner{
     width: $Sp-width;
     margin: 0 auto;
-    padding-bottom: 60px;
   }
 }
 .contact{
+    padding-top: 60px;
+    width: $Sp-width;
+    margin: 0 auto 20px auto;
+    font-family: 'butler';
+    text-align: left;
   h2{
-      width: $Sp-width;
-      margin: 0 auto;
-      font-family: 'Inter';
-      font-weight: 700;
-      text-align: left;
-      font-size: 14px;
-      border-bottom: 1px solid #333;
-      padding-bottom: 16px;
       color: #333;
+      border-bottom: 1px solid #333;
     }
-  padding-top: 60px;
-  width: $Sp-width;
-  margin: 0 auto 20px auto;
-  font-family: 'butler';
-  text-align: left;
   ul{
     li{
-      font-size: 24px;
+      font-size: 36px;
       border-bottom: 1px solid #000;
-      margin-top: 24px;
-      padding-bottom: 20px;
+      margin-top: 32px;
+      padding-bottom: 28px;
       display: flex;
       justify-content: space-between;
       width: $Sp-width;
       height: auto;
+      
       span{
         font-size: 14px;
       }
