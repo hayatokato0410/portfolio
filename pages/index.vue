@@ -82,7 +82,7 @@ async asyncData() {
     }
 }
 .firstview{
-  height: 85vh;
+  min-height: 80vh;
   width: $Sp-width;
   margin: 0 auto;
   font-family: 'butler';
@@ -101,9 +101,10 @@ async asyncData() {
     opacity: 0.5;
   }
   .circle{
-    position: absolute;
-    bottom: 10%;
+    position: fixed;
+    bottom: 20px;
     right: 20px;
+    mix-blend-mode:difference;
     animation: rotate_right 8s linear infinite;
     @keyframes rotate_right {
       0%   { transform: rotate(0deg); }
@@ -136,7 +137,7 @@ async asyncData() {
     }
   ul{
     li{
-      font-size: 36px;
+      font-size: 32px;
       border-bottom: 1px solid #000;
       margin-top: 32px;
       padding-bottom: 28px;

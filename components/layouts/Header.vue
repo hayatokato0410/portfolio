@@ -25,6 +25,7 @@ async asyncData() {
 </script>
 <style lang="scss" scoped>
 .header{
+    mix-blend-mode:difference;
     position: fixed;
     font-family: 'Inter';
     width: $Sp-width;
@@ -32,6 +33,7 @@ async asyncData() {
     margin-left: 20px;
     display: flex;
     justify-content: space-between;
+    color: white;
     .logo{
         margin-top: 20px;
         font-weight: 500;
@@ -46,7 +48,6 @@ async asyncData() {
         a{
             font-size: 12px;
             text-decoration: none;
-            color: black;
         }
     }
 }
