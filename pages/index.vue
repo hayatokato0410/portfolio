@@ -4,9 +4,11 @@
       <h1>
           <p class="fadeAnimation">HAYATO KATO</p>
       </h1>
-      <p class="profile">
-        I am a web designer and developer. I work in Tokyo. I also take and edit photos and videos. My goal is to build a better society through the power of design.
-      </p>
+      <div class="profile">
+        <p>I am a web designer and developer.</p>
+        <p>I work in Tokyo. I also take and edit photos and videos.</p>
+        <p>My goal is to build a better society through the power of design.</p>
+      </div>
       <div class="circle">
       <img src="~/assets/image/circle.svg">
       </div>
@@ -91,7 +93,6 @@ async asyncData() {
   width: $Sp-width;
   margin: 0 auto;
   font-family: 'butler';
-  letter-spacing: 0.02em;
   h1 {
     padding-top: 12vh;
     font-size: 52px;
@@ -102,8 +103,8 @@ async asyncData() {
     width: 60vw;
     margin-top: 20px;
     line-height: 1.5;
-    font-size: 14px;
-    opacity: 0.5;
+    font-size: 16px;
+    opacity: 0.8;
   }
   .circle{
     position: absolute;
@@ -173,7 +174,7 @@ async asyncData() {
 }
 @mixin marquee {
   animation-name: animation-marquee;
-  animation-duration: 20s;
+  animation-duration: 15s;
   animation-timing-function: linear;
   animation-delay: 0s;
   animation-iteration-count: infinite;
@@ -182,8 +183,8 @@ async asyncData() {
 
 .marquee-wrap {
   // background: #232323;
-  margin: 30px 0 0 0;
-  height: 100px;
+  margin: 28px 0 0 0;
+  height: 105px;
   overflow: hidden;
   position: relative;
   border-bottom: 1px solid #333;
