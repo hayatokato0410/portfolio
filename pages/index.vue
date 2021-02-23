@@ -82,7 +82,7 @@ async asyncData() {
     }
 }
 .firstview{
-  min-height: 80vh;
+  min-height: 82vh;
   width: $Sp-width;
   margin: 0 auto;
   font-family: 'butler';
@@ -101,7 +101,7 @@ async asyncData() {
     opacity: 0.5;
   }
   .circle{
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
     mix-blend-mode:difference;
