@@ -9,8 +9,12 @@
         <p>I work in Tokyo. I also take and edit photos and videos.</p>
         <p>My goal is to build a better society through the power of design.</p>
       </div>
+      <div class="period">2020 - 2021</div>
+      <div class="arrow">
+        <img src="~/assets/image/arrow.svg">
+      </div>
       <div class="circle">
-      <img src="~/assets/image/circle.svg">
+        <img src="~/assets/image/circle.svg">
       </div>
     </section>
     <section class="work">
@@ -83,11 +87,11 @@ async asyncData() {
       width: $Sp-width;
       margin: 0 auto;
       font-family: 'Inter';
-      font-weight: 700;
+      font-weight: 500;
       text-align: left;
       font-size: 16px;
       border-bottom: 1px solid white;
-      padding-bottom: 28px;
+      padding-bottom: 20px;
       color: white;
     }
 }
@@ -107,9 +111,26 @@ async asyncData() {
     margin-top: 20px;
     line-height: 1.5;
     font-size: 16px;
-    opacity: 0.8;
+    opacity: 0.6;
+  }
+  .period{
+    letter-spacing: 0.025em;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 12px;
+    font-family: 'Inter';
+    font-weight: 500;
+  }
+  .arrow{
+    position: absolute;
+    bottom: 55px;
+    right: 65px;
+    mix-blend-mode:difference;
+    width: 10px;
   }
   .circle{
+    width: 100px;
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -127,7 +148,7 @@ async asyncData() {
 }
 .work{
   background: #333;
-  padding-top: 40px;
+  padding-top: 32px;
   padding-bottom: 40px;
   .work_inner{
     width: $Sp-width;
@@ -135,7 +156,7 @@ async asyncData() {
   }
 }
 .contact{
-    min-height: 100vh;
+    min-height: 90vh;
     padding-top: 60px;
     width: $Sp-width;
     margin: 0 auto 20px auto;
@@ -147,7 +168,7 @@ async asyncData() {
     }
   .contactTitle{
     li{
-      font-size: 28px;
+      font-size: 32px;
       border-bottom: 1px solid #000;
       margin-top: 32px;
       padding-bottom: 24px;
@@ -156,7 +177,7 @@ async asyncData() {
       width: $Sp-width;
       height: auto;
       span{
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   }
@@ -196,7 +217,7 @@ async asyncData() {
 .marquee-wrap {
   // background: #232323;
   margin: 28px 0 0 0;
-  height: 110px;
+  height: 120px;
   overflow: hidden;
   position: relative;
   border-bottom: 1px solid #333;

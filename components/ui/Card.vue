@@ -45,7 +45,7 @@ async asyncData() {
 .workContainer{
   .workTitle{
     font-family: 'butler-Medium';
-    margin-top: 32px;
+    margin-top: 28px;
     border-bottom: 1px solid white;
     padding-bottom: 40px;
     color: white;
@@ -61,13 +61,13 @@ async asyncData() {
         font-family: 'butler-Light';
     }
     &_title{
-        letter-spacing: 0.02em;
-        font-size: 44px;
+        letter-spacing: 0.025em;
+        font-size: 40px;
         margin-bottom: 8px;
     }
     &_category{
       font-family: 'butler-Light';
-      font-size: 14px;
+      font-size: 16px;
       letter-spacing: 0.02em;
     }
     & img{

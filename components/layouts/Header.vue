@@ -49,6 +49,12 @@ async asyncData() {
             font-size: 12px;
             text-decoration: none;
         }
+        .ellipse{
+            img{
+                width: 50px;
+                margin-top: -30px;
+            }
+        }
     }
 }
 
