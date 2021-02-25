@@ -36,6 +36,9 @@
           <ul class="marquee-list">
             <li class="marquee-item">Get in Touch</li>
           </ul>
+          <ul class="marquee-list_2">
+            <li class="marquee-item">Get in Touch</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -132,6 +135,7 @@ async asyncData() {
   }
 }
 .contact{
+    min-height: 100vh;
     padding-top: 60px;
     width: $Sp-width;
     margin: 0 auto 20px auto;
@@ -174,9 +178,17 @@ async asyncData() {
 }
 @mixin marquee {
   animation-name: animation-marquee;
-  animation-duration: 15s;
+  animation-duration: 16s;
   animation-timing-function: linear;
   animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+@mixin marquee_2 {
+  animation-name: animation-marquee;
+  animation-duration: 16s;
+  animation-timing-function: linear;
+  animation-delay: 8s;
   animation-iteration-count: infinite;
   animation-direction: normal;
 }
@@ -184,7 +196,7 @@ async asyncData() {
 .marquee-wrap {
   // background: #232323;
   margin: 28px 0 0 0;
-  height: 105px;
+  height: 110px;
   overflow: hidden;
   position: relative;
   border-bottom: 1px solid #333;
@@ -199,9 +211,26 @@ async asyncData() {
           font-weight: lighter;
           font-size: 80px;
           color: #333;
-          padding: 0 60px 0 0;
+          padding: 0 80px 0 0;
+             &:first-child {
+              padding-left:calc(100vw + 40px);
+            }
+        }
+    }
+    .marquee-list_2 {
+      white-space: nowrap;
+      position: absolute;
+      @include marquee_2;
+        .marquee-item {
+          font-family: 'butler-Light';
+          display: inline;
+          white-space: nowrap;
+          font-weight: lighter;
+          font-size: 80px;
+          color: #333;
+          padding: 0 80px 0 0;
             &:first-child {
-              padding: 0 60px 0 100vw;
+              padding-left:calc(100vw + 40px);
             }
         }
     }
