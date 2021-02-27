@@ -51,6 +51,7 @@
 </template>
 <script>
 import { gsap } from "gsap"
+import {TweenMax} from "gsap"
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import axios from 'axios'
 if (process.client) {
@@ -60,7 +61,7 @@ export default {
   mounted() {
     this.scrollItemA(),
     this.scrollItemB()
-  },
+    },
   methods: {
     scrollItemA() {
       gsap.to('.bg', { // 動かしたい要素は".a"
@@ -120,8 +121,6 @@ export default {
   display: block;
   width: 100vw;
     h2{
-      color: white;
-      mix-blend-mode:difference;
       width: $Sp-width;
       margin: 0 auto;
       font-family: 'Inter';
@@ -209,7 +208,7 @@ section{
 .contact{
     color: white;
     mix-blend-mode:difference;
-    min-height: 90vh;
+    min-height: 60vh;
     padding-top: 10vh;
     width: $Sp-width;
     margin: 0 auto 20px auto;
