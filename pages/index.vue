@@ -68,10 +68,10 @@ export default {
         duration: 0.5, // アニメーションは1秒間
         scrollTrigger: {
           trigger: '.work', // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: 'top 70%', // アニメーション開始位置
-          end: 'top 65%',
+          start: 'top 60%', // アニメーション開始位置
+          end: 'top 40%',
           scrub: 0.5,
-          markers: true // マーカー表示
+          // markers: true // マーカー表示
         }
       })
     },
@@ -81,10 +81,10 @@ export default {
         duration: 0.5, // アニメーションは1秒間
         scrollTrigger: {
           trigger: '.work', // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: 'bottom 70%', // アニメーション開始位置
-          end: 'bottom 65%',
+          start: 'bottom 60%', // アニメーション開始位置
+          end: 'bottom 40%',
           scrub: 0.5,
-          markers: true // マーカー表示
+          // markers: true // マーカー表示
         }
       })
     },

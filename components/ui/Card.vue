@@ -46,15 +46,16 @@ async asyncData() {
   .workTitle{
     font-family: 'butler-Medium';
     margin-top: 28px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid $Bg-color;
     padding-bottom: 40px;
-    color: white;
     &_wrapper{
       display: flex;
       width: $Sp-width;
       height: auto;
       justify-content: space-between;
       align-items: center;
+      color: $Bg-color;
+      mix-blend-mode:difference;
     }
     &_number{
         font-size: 20px;
@@ -66,6 +67,8 @@ async asyncData() {
         margin-bottom: 8px;
     }
     &_category{
+      color: $Bg-color;
+      mix-blend-mode:difference;
       font-family: 'butler-Light';
       font-size: 16px;
       letter-spacing: 0.02em;
