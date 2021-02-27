@@ -145,23 +145,23 @@ section{
   z-index: 0;
 }
 .firstview{
+  color: #000;
   min-height: 90vh;
   width: $Sp-width;
   margin: 0 auto;
   font-family: 'butler';
-  mix-blend-mode:difference;
   h1 {
-    color: white;
-    mix-blend-mode:difference;
+    // color: white;
+    // mix-blend-mode:difference;
     padding-top: 12vh;
     font-size: 52px;
     p{
     }
   }
   .profile{
-    color: white;
+    // color: white;
     width: 60vw;
-    margin-top: 20px;
+    margin-top: 40px;
     line-height: 1.5;
     font-size: 16px;
     opacity: 0.6;
@@ -169,11 +169,11 @@ section{
   .period{
     letter-spacing: 0.025em;
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     font-size: 12px;
     font-family: 'Inter';
     font-weight: 500;
-    color: white;
+    // color: white;
   }
   .arrow{
     position: absolute;
@@ -198,7 +198,7 @@ section{
   }
 }
 .work{
-  // background: #333;
+  // background: #000;
   padding-top: 32px;
   padding-bottom: 40px;
   .work_inner{
