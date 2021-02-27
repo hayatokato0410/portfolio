@@ -1,5 +1,6 @@
 <template>
   <main class="container">
+    <div class="bg"></div>
     <section class="firstview">
       <h1>
           <p class="fadeAnimation">HAYATO KATO</p>
@@ -57,18 +58,32 @@ if (process.client) {
 }
 export default {
   mounted() {
-    this.scrollItemA()
+    this.scrollItemA(),
+    this.scrollItemB()
   },
   methods: {
     scrollItemA() {
-      gsap.to('.main', { // 動かしたい要素は".a"
-        background: '#333', // 右方向に500動く
-        duration: 0.25, // アニメーションは1秒間
+      gsap.to('.bg', { // 動かしたい要素は".a"
+        background: '#000', // 右方向に500動く
+        duration: 1, // アニメーションは1秒間
         scrollTrigger: {
           trigger: '.work', // 要素".a"がビューポートに入ったときにアニメーション開始
           start: 'top 80%', // アニメーション開始位置
-          end: 'top 20%',
-          scrub: 0.25,
+          end: 'top 75%',
+          scrub: 1,
+          markers: true // マーカー表示
+        }
+      })
+    },
+    scrollItemB() {
+      gsap.to('.bg', { // 動かしたい要素は".a"
+        opacity: '0', // 右方向に500動く
+        duration: 1, // アニメーションは1秒間
+        scrollTrigger: {
+          trigger: '.work', // 要素".a"がビューポートに入ったときにアニメーション開始
+          start: 'bottom 80%', // アニメーション開始位置
+          end: 'bottom 75%',
+          scrub: 1,
           markers: true // マーカー表示
         }
       })
@@ -116,6 +131,17 @@ export default {
       padding-bottom: 20px;
       color: $Bg-color;
     }
+}
+section{
+  position: relative;
+  z-index: 1;
+}
+.bg{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: $Bg-color;
+  z-index: 0;
 }
 .firstview{
   min-height: 90vh;
@@ -186,14 +212,14 @@ export default {
     font-family: 'butler';
     text-align: left;
   h2{
-      color: $Bg-color;
+      color:  #333;
       border-bottom: 1px solid #333;
     }
   .contactTitle{
     li{
-      color:$Bg-color;
+      color: #333;
       font-size: 32px;
-      border-bottom: 1px solid $Bg-color;
+      border-bottom: 1px solid #333;
       margin-top: 32px;
       padding-bottom: 24px;
       display: flex;
@@ -244,7 +270,7 @@ export default {
   height: 120px;
   overflow: hidden;
   position: relative;
-  border-bottom: 1px solid $Bg-color;
+  border-bottom: 1px solid #333;
     .marquee-list {
       white-space: nowrap;
       position: absolute;
@@ -255,7 +281,7 @@ export default {
           white-space: nowrap;
           font-weight: lighter;
           font-size: 80px;
-          color: $Bg-color;
+          color: #333;
           padding: 0 80px 0 0;
              &:first-child {
               padding-left:calc(100vw + 40px);
@@ -272,7 +298,7 @@ export default {
           white-space: nowrap;
           font-weight: lighter;
           font-size: 80px;
-          color: $Bg-color;
+          color:  #333;
           padding: 0 80px 0 0;
             &:first-child {
               padding-left:calc(100vw + 40px);

@@ -25,6 +25,8 @@ async asyncData() {
 </script>
 <style lang="scss" scoped>
 .header{
+    position: relative;
+    z-index: 1;
     mix-blend-mode:difference;
     position: fixed;
     font-family: 'Inter';

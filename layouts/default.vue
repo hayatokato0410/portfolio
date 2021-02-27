@@ -67,6 +67,7 @@ html {
   background-color: #35495e;
 }
 .main{
-  background-color: #EDEDED;
+  background-color: $Bg-color;
 }
+
 </style>
