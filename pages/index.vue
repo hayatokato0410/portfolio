@@ -68,8 +68,8 @@ export default {
         duration: 0.5, // アニメーションは1秒間
         scrollTrigger: {
           trigger: '.work', // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: 'top 80%', // アニメーション開始位置
-          end: 'top 70%',
+          start: 'top 70%', // アニメーション開始位置
+          end: 'top 65%',
           scrub: 0.5,
           markers: true // マーカー表示
         }
@@ -81,8 +81,8 @@ export default {
         duration: 0.5, // アニメーションは1秒間
         scrollTrigger: {
           trigger: '.work', // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: 'bottom 80%', // アニメーション開始位置
-          end: 'bottom 70%',
+          start: 'bottom 70%', // アニメーション開始位置
+          end: 'bottom 65%',
           scrub: 0.5,
           markers: true // マーカー表示
         }
@@ -178,13 +178,14 @@ section{
   .arrow{
     position: absolute;
     bottom: 55px;
-    right: 65px;
+    right: 45px;
     width: 10px;
   }
   .circle{
     width: 100px;
     position: absolute;
     bottom: 20px;
+    right: 0px;
     animation: rotate_right 8s linear infinite;
     @keyframes rotate_right {
       0%   { transform: rotate(0deg); }
@@ -206,6 +207,8 @@ section{
   }
 }
 .contact{
+    color: white;
+    mix-blend-mode:difference;
     min-height: 90vh;
     padding-top: 10vh;
     width: $Sp-width;
@@ -213,14 +216,12 @@ section{
     font-family: 'butler';
     text-align: left;
   h2{
-      color:  #333;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid white;
     }
   .contactTitle{
     li{
-      color: #333;
       font-size: 32px;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid white;
       margin-top: 32px;
       padding-bottom: 24px;
       display: flex;
@@ -271,7 +272,9 @@ section{
   height: 120px;
   overflow: hidden;
   position: relative;
-  border-bottom: 1px solid #333;
+  color: white;
+  mix-blend-mode:difference;
+  border-bottom: 1px solid white;
     .marquee-list {
       white-space: nowrap;
       position: absolute;
@@ -282,7 +285,6 @@ section{
           white-space: nowrap;
           font-weight: lighter;
           font-size: 80px;
-          color: #333;
           padding: 0 80px 0 0;
              &:first-child {
               padding-left:calc(100vw + 40px);
@@ -299,7 +301,6 @@ section{
           white-space: nowrap;
           font-weight: lighter;
           font-size: 80px;
-          color:  #333;
           padding: 0 80px 0 0;
             &:first-child {
               padding-left:calc(100vw + 40px);
