@@ -65,12 +65,12 @@ export default {
     scrollItemA() {
       gsap.to('.bg', { // 動かしたい要素は".a"
         background: '#000', // 右方向に500動く
-        duration: 1, // アニメーションは1秒間
+        duration: 0.5, // アニメーションは1秒間
         scrollTrigger: {
           trigger: '.work', // 要素".a"がビューポートに入ったときにアニメーション開始
           start: 'top 80%', // アニメーション開始位置
-          end: 'top 75%',
-          scrub: 1,
+          end: 'top 70%',
+          scrub: 0.5,
           markers: true // マーカー表示
         }
       })
@@ -78,12 +78,12 @@ export default {
     scrollItemB() {
       gsap.to('.bg', { // 動かしたい要素は".a"
         opacity: '0', // 右方向に500動く
-        duration: 1, // アニメーションは1秒間
+        duration: 0.5, // アニメーションは1秒間
         scrollTrigger: {
           trigger: '.work', // 要素".a"がビューポートに入ったときにアニメーション開始
           start: 'bottom 80%', // アニメーション開始位置
-          end: 'bottom 75%',
-          scrub: 1,
+          end: 'bottom 70%',
+          scrub: 0.5,
           markers: true // マーカー表示
         }
       })
@@ -116,11 +116,12 @@ export default {
 <style lang="scss" scoped>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
   height: auto;
   display: block;
   width: 100vw;
     h2{
+      color: white;
+      mix-blend-mode:difference;
       width: $Sp-width;
       margin: 0 auto;
       font-family: 'Inter';
@@ -148,13 +149,17 @@ section{
   width: $Sp-width;
   margin: 0 auto;
   font-family: 'butler';
+  mix-blend-mode:difference;
   h1 {
+    color: white;
+    mix-blend-mode:difference;
     padding-top: 12vh;
     font-size: 52px;
     p{
     }
   }
   .profile{
+    color: white;
     width: 60vw;
     margin-top: 20px;
     line-height: 1.5;
@@ -165,25 +170,21 @@ section{
     letter-spacing: 0.025em;
     position: absolute;
     bottom: 20px;
-    left: 20px;
     font-size: 12px;
     font-family: 'Inter';
     font-weight: 500;
+    color: white;
   }
   .arrow{
     position: absolute;
     bottom: 55px;
     right: 65px;
-    mix-blend-mode:difference;
     width: 10px;
   }
   .circle{
-    opacity: 0.6;
     width: 100px;
     position: absolute;
     bottom: 20px;
-    right: 20px;
-    mix-blend-mode:difference;
     animation: rotate_right 8s linear infinite;
     @keyframes rotate_right {
       0%   { transform: rotate(0deg); }
@@ -206,7 +207,7 @@ section{
 }
 .contact{
     min-height: 90vh;
-    padding-top: 60px;
+    padding-top: 10vh;
     width: $Sp-width;
     margin: 0 auto 20px auto;
     font-family: 'butler';
