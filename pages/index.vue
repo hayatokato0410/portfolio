@@ -48,11 +48,33 @@
     </section>
   </main>
 </template>
-
 <script>
+import { gsap } from "gsap"
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import axios from 'axios'
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
 export default {
-async asyncData() {
+  mounted() {
+    this.scrollItemA()
+  },
+  methods: {
+    scrollItemA() {
+      gsap.to('.main', { // 動かしたい要素は".a"
+        background: '#333', // 右方向に500動く
+        duration: 0.25, // アニメーションは1秒間
+        scrollTrigger: {
+          trigger: '.work', // 要素".a"がビューポートに入ったときにアニメーション開始
+          start: 'top 80%', // アニメーション開始位置
+          end: 'top 20%',
+          scrub: 0.25,
+          markers: true // マーカー表示
+        }
+      })
+    },
+  },
+  async asyncData() {
     const { data } = await axios.get(
     'https://hayato_portfolio.microcms.io/api/v1/works',
        {
@@ -90,9 +112,9 @@ async asyncData() {
       font-weight: 500;
       text-align: left;
       font-size: 16px;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid $Bg-color;
       padding-bottom: 20px;
-      color: white;
+      color: $Bg-color;
     }
 }
 .firstview{
@@ -130,6 +152,7 @@ async asyncData() {
     width: 10px;
   }
   .circle{
+    opacity: 0.6;
     width: 100px;
     position: absolute;
     bottom: 20px;
@@ -147,7 +170,7 @@ async asyncData() {
   }
 }
 .work{
-  background: #333;
+  // background: #333;
   padding-top: 32px;
   padding-bottom: 40px;
   .work_inner{
@@ -163,13 +186,14 @@ async asyncData() {
     font-family: 'butler';
     text-align: left;
   h2{
-      color: #333;
+      color: $Bg-color;
       border-bottom: 1px solid #333;
     }
   .contactTitle{
     li{
+      color:$Bg-color;
       font-size: 32px;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid $Bg-color;
       margin-top: 32px;
       padding-bottom: 24px;
       display: flex;
@@ -220,7 +244,7 @@ async asyncData() {
   height: 120px;
   overflow: hidden;
   position: relative;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid $Bg-color;
     .marquee-list {
       white-space: nowrap;
       position: absolute;
@@ -231,7 +255,7 @@ async asyncData() {
           white-space: nowrap;
           font-weight: lighter;
           font-size: 80px;
-          color: #333;
+          color: $Bg-color;
           padding: 0 80px 0 0;
              &:first-child {
               padding-left:calc(100vw + 40px);
@@ -248,7 +272,7 @@ async asyncData() {
           white-space: nowrap;
           font-weight: lighter;
           font-size: 80px;
-          color: #333;
+          color: $Bg-color;
           padding: 0 80px 0 0;
             &:first-child {
               padding-left:calc(100vw + 40px);
