@@ -20,6 +20,7 @@
     </section>
     <section class="work">
       <h2>work</h2>
+      <hr>
       <div class="work_inner">
         <Card v-for="content in contents"
           :title="content.title"
@@ -31,6 +32,7 @@
     </section>
     <section class="contact">
       <h2>CONTACT</h2>
+      <hr>
       <div class="contact_inner">
         <ul class="contactTitle">
             <a href=""><li class="contactTitle__mail"><p>Mail</p><p><span>hayatokato0410@gmail.com</span></p></li></a>
@@ -51,7 +53,6 @@
 </template>
 <script>
 import { gsap } from "gsap"
-import {TweenMax} from "gsap"
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import axios from 'axios'
 if (process.client) {
@@ -59,33 +60,73 @@ if (process.client) {
 }
 export default {
   mounted() {
-    this.scrollItemA(),
-    this.scrollItemB()
+    this.scrollBgAnimationA(),
+    this.scrollBgAnimationB(),
+    this.scrollBgAnimationC(),
+    this.scrollBgAnimationD(),
+    this.scrollBgAnimationE()
     },
   methods: {
-    scrollItemA() {
+    scrollBgAnimationA() {
       gsap.to('.bg', { // 動かしたい要素は".a"
         background: '#000', // 右方向に500動く
-        duration: 0.5, // アニメーションは1秒間
+        duration: 0.2, // アニメーションは1秒間
         scrollTrigger: {
           trigger: '.work', // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: 'top 60%', // アニメーション開始位置
-          end: 'top 40%',
-          scrub: 0.5,
+          start: 'top 70%', // アニメーション開始位置
+          end: 'top 50%',
+          scrub: 0.2,
           // markers: true // マーカー表示
         }
       })
     },
-    scrollItemB() {
-      gsap.to('.bg', { // 動かしたい要素は".a"
-        opacity: '0', // 右方向に500動く
-        duration: 0.5, // アニメーションは1秒間
+    scrollBgAnimationB() {
+      gsap.to('.bg', {
+        opacity: '0',
+        duration: 0.2,
         scrollTrigger: {
-          trigger: '.work', // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: 'bottom 60%', // アニメーション開始位置
-          end: 'bottom 40%',
-          scrub: 0.5,
-          // markers: true // マーカー表示
+          trigger: '.work',
+          start: 'bottom 70%',
+          end: 'bottom 50%',
+          scrub: 0.2,
+        }
+      })
+    },
+     scrollBgAnimationC() {
+      gsap.to('.work', {
+        opacity: '0',
+        duration: 0.2,
+        scrollTrigger: {
+          trigger: '.work',
+          start: 'bottom 70%',
+          end: 'bottom 50%',
+          scrub: 0.2,
+        }
+      })
+    },
+    scrollBgAnimationD() {
+      gsap.to('.work hr', {
+        width: '90vw',
+        duration: 0.2,
+        scrollTrigger: {
+          trigger: '.work hr',
+          start: 'top 70%',
+          end: 'top 50%',
+          scrub: 0.2,
+          // markers: true
+        }
+      })
+    },
+    scrollBgAnimationE() {
+      gsap.to('.contact hr', {
+        width: '90vw',
+        duration: 0.2,
+        scrollTrigger: {
+          trigger: '.contact hr',
+          start: 'top 80%',
+          end: 'top 60%',
+          scrub: 0.2,
+          // markers: true
         }
       })
     },
@@ -99,17 +140,6 @@ export default {
     )
     return data
   },
-  //   mounted: function() {
-  //   var $allMsg = $('.fadeAnimation');
-  //   var $wordList = $('.fadeAnimation').html().split("");
-  //   $('.fadeAnimation').html("");
-  //   $.each($wordList, function(idx, elem) {
-  //       var newEL = $("<span/>").text(elem).css({ 'opacity': 0 });
-  //       newEL.appendTo($allMsg);
-  //       newEL.delay(idx * 100);
-  //       newEL.animate({ 'opacity': 1 }, 2000);
-  //   });
-  // }
 }
 
 </script>
@@ -120,14 +150,13 @@ export default {
   height: auto;
   display: block;
   width: 100vw;
+  text-align: left;
     h2{
-      width: $Sp-width;
-      margin: 0 auto;
+      width: 1px;
       font-family: 'Inter';
       font-weight: 500;
       text-align: left;
       font-size: 16px;
-      border-bottom: 1px solid $Bg-color;
       padding-bottom: 20px;
       color: $Bg-color;
     }
@@ -154,8 +183,6 @@ section{
     // mix-blend-mode:difference;
     padding-top: 12vh;
     font-size: 52px;
-    p{
-    }
   }
   .profile{
     // color: white;
@@ -176,14 +203,14 @@ section{
   }
   .arrow{
     position: absolute;
-    bottom: 55px;
+    bottom: 60px;
     right: 45px;
     width: 10px;
   }
   .circle{
     width: 100px;
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     right: 0px;
     animation: rotate_right 8s linear infinite;
     @keyframes rotate_right {
@@ -200,27 +227,39 @@ section{
   // background: #000;
   padding-top: 32px;
   padding-bottom: 40px;
+  h2{
+    margin: 0 auto 0 20px;
+  }
+  hr{
+      width: 1px;
+      color: $Bg-color;
+      margin: 0 20px;
+    }
   .work_inner{
     width: $Sp-width;
     margin: 0 auto;
   }
 }
 .contact{
-    color: white;
-    mix-blend-mode:difference;
+    color: #000;
     min-height: 60vh;
     padding-top: 10vh;
     width: $Sp-width;
-    margin: 0 auto 20px auto;
+    margin: 0 20px;
     font-family: 'butler';
     text-align: left;
+    hr{
+      width: 1px;
+      color: #000;
+      margin: 0;
+    }
   h2{
-      border-bottom: 1px solid white;
+      color: #000;
     }
   .contactTitle{
     li{
       font-size: 32px;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid #000;
       margin-top: 32px;
       padding-bottom: 24px;
       display: flex;
@@ -271,9 +310,8 @@ section{
   height: 120px;
   overflow: hidden;
   position: relative;
-  color: white;
-  mix-blend-mode:difference;
-  border-bottom: 1px solid white;
+  color: #000;
+  border-bottom: 1px solid #000;
     .marquee-list {
       white-space: nowrap;
       position: absolute;
