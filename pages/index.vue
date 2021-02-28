@@ -56,7 +56,7 @@
 import { gsap } from "gsap"
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import axios from 'axios'
-import * as animationData from "~/assets/animation/animation.json";
+import * as animationData from "~/assets/animation/hayatokato.json";
 if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 }
@@ -119,7 +119,7 @@ export default {
     scrollBgAnimationD() {
       gsap.to('.work hr', {
         width: '90vw',
-        duration: 1,
+        duration: 0.75,
         scrollTrigger: {
           trigger: '.work hr',
           start: 'top 90%',
@@ -132,10 +132,10 @@ export default {
     scrollBgAnimationE() {
       gsap.to('.contact hr', {
         width: '90vw',
-        duration: 1,
+        duration: 0.75,
         scrollTrigger: {
           trigger: '.contact hr',
-          start: 'top 70%',
+          start: 'top 80%',
           // end: 'top 60%',
           // scrub: 1,
           // markers: true

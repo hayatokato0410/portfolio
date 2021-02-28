@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <section class="about">
-      <h2>ABOUT</h2>
+      <lottie class="nameAnimation" :options="defaultOptions" v-on:animCreated="handleAnimation"/>
       <ul class="aboutContainer">
         <li class="aboutTitle" v-for="content in contents" :key="content.id">
             <div class="aboutTitle__age">{{ content.age }}</div>
@@ -16,19 +16,75 @@
 </template>
 
 <script>
+import { gsap } from "gsap"
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import axios from 'axios'
+import * as animationData from "~/assets/animation/about.json";
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
 export default {
-  async asyncData({ params }) {
+  mounted: function () {
+    // this.scrollBgAnimationA(),
+    // this.scrollBgAnimationB(),
+    // this.scrollBgAnimationC(),
+    // this.scrollBgAnimationD(),
+    // this.scrollBgAnimationE()
+  },
+  data() {
+    return {
+      // データを定義
+      defaultOptions: { animationData: animationData },
+      animationSpeed: 1
+    };
+  },
+  methods: {
+    handleAnimation: function(anim) {
+      this.anim = anim;
+    },
+  },
+  async asyncData() {
     const { data } = await axios.get(
     'https://hayato_portfolio.microcms.io/api/v1/about',
        {
-        headers: { 'X-API-KEY': 'c4c9d84e-ca69-4a71-a4d2-d56d6870d9f7' }
+        headers: { 'X-API-KEY': process.env.API_KEY }
       }
     )
     return data
-  }
+  },
 }
+
 </script>
 
 <style lang="scss">
+.container {
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  width: 100vw;
+  text-align: left;
+    h2{
+      width: 1px;
+      font-family: 'Inter';
+      font-weight: 500;
+      text-align: left;
+      font-size: 16px;
+      padding-bottom: 20px;
+      color: $Bg-color;
+    }
+}
+section{
+  position: relative;
+  z-index: 1;
+}
+.about{
+  color: #000;
+  min-height: 90vh;
+  width: $Sp-width;
+  margin: 0 auto;
+  font-family: 'butler';
+  .aboutContainer{
+    margin-top: 20px;
+  }
+}
 </style>
