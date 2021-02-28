@@ -197,7 +197,7 @@ section{
   .profile{
     // color: white;
     width: 60vw;
-    margin-top: 40px;
+    margin-top: 20px;
     line-height: 1.5;
     font-size: 16px;
     opacity: 0.6;
