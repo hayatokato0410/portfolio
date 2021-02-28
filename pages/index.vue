@@ -59,13 +59,13 @@ if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 }
 export default {
-  mounted() {
+  mounted: function () {
     this.scrollBgAnimationA(),
     this.scrollBgAnimationB(),
     this.scrollBgAnimationC(),
     this.scrollBgAnimationD(),
     this.scrollBgAnimationE()
-    },
+  },
   methods: {
     scrollBgAnimationA() {
       gsap.to('.bg', { // 動かしたい要素は".a"

@@ -15,7 +15,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     script: [
-      // { src: 'js/jquery.inview.min.js'}
+      // { src: 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js'}
     ]
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
