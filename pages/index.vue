@@ -2,9 +2,10 @@
   <main class="container">
     <div class="bg"></div>
     <section class="firstview">
-      <h1>
+      <lottie class="nameAnimation" :options="defaultOptions" v-on:animCreated="handleAnimation"/>
+      <!-- <h1>
           <p class="fadeAnimation">HAYATO KATO</p>
-      </h1>
+      </h1> -->
       <div class="profile">
         <p>I am a web designer and developer.</p>
         <p>I work in Tokyo. I also take and edit photos and videos.</p>
@@ -55,6 +56,7 @@
 import { gsap } from "gsap"
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import axios from 'axios'
+import * as animationData from "~/assets/animation/animation.json";
 if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 }
@@ -66,7 +68,17 @@ export default {
     this.scrollBgAnimationD(),
     this.scrollBgAnimationE()
   },
+  data() {
+    return {
+      // データを定義
+      defaultOptions: { animationData: animationData },
+      animationSpeed: 1
+    };
+  },
   methods: {
+    handleAnimation: function(anim) {
+      this.anim = anim;
+    },
     scrollBgAnimationA() {
       gsap.to('.bg', { // 動かしたい要素は".a"
         background: '#000', // 右方向に500動く
@@ -178,12 +190,10 @@ section{
   width: $Sp-width;
   margin: 0 auto;
   font-family: 'butler';
-  h1 {
-    // color: white;
-    // mix-blend-mode:difference;
-    padding-top: 12vh;
-    font-size: 52px;
-  }
+  // .nameAnimation{
+  //   margin: 0 0;
+  //   padding-top: 12vh;
+  // }
   .profile{
     // color: white;
     width: 60vw;
