@@ -122,7 +122,7 @@ export default {
         duration: 1,
         scrollTrigger: {
           trigger: '.work hr',
-          start: 'top 70%',
+          start: 'top 90%',
           // end: 'top 50%',
           // scrub: 1,
           // markers: true
@@ -135,7 +135,7 @@ export default {
         duration: 1,
         scrollTrigger: {
           trigger: '.contact hr',
-          start: 'top 80%',
+          start: 'top 70%',
           // end: 'top 60%',
           // scrub: 1,
           // markers: true
@@ -197,7 +197,7 @@ section{
   .profile{
     // color: white;
     width: 60vw;
-    margin-top: 20px;
+    margin-top: 10px;
     line-height: 1.5;
     font-size: 16px;
     opacity: 0.6;
@@ -213,14 +213,14 @@ section{
   }
   .arrow{
     position: absolute;
-    bottom: 60px;
+    bottom: 75px;
     right: 45px;
     width: 10px;
   }
   .circle{
     width: 100px;
     position: absolute;
-    bottom: 25px;
+    bottom: 40px;
     right: 0px;
     animation: rotate_right 8s linear infinite;
     @keyframes rotate_right {
