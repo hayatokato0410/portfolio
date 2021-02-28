@@ -107,12 +107,12 @@ export default {
     scrollBgAnimationD() {
       gsap.to('.work hr', {
         width: '90vw',
-        duration: 0.2,
+        duration: 1,
         scrollTrigger: {
           trigger: '.work hr',
           start: 'top 70%',
-          end: 'top 50%',
-          scrub: 0.2,
+          // end: 'top 50%',
+          // scrub: 1,
           // markers: true
         }
       })
@@ -120,12 +120,12 @@ export default {
     scrollBgAnimationE() {
       gsap.to('.contact hr', {
         width: '90vw',
-        duration: 0.2,
+        duration: 1,
         scrollTrigger: {
           trigger: '.contact hr',
           start: 'top 80%',
-          end: 'top 60%',
-          scrub: 0.2,
+          // end: 'top 60%',
+          // scrub: 1,
           // markers: true
         }
       })
@@ -227,13 +227,12 @@ section{
   // background: #000;
   padding-top: 32px;
   padding-bottom: 40px;
-  h2{
-    margin: 0 auto 0 20px;
-  }
+  width: $Sp-width;
+  margin: 0 auto;
+  overflow: hidden;
   hr{
       width: 1px;
       color: $Bg-color;
-      margin: 0 20px;
     }
   .work_inner{
     width: $Sp-width;
@@ -243,15 +242,14 @@ section{
 .contact{
     color: #000;
     min-height: 60vh;
-    padding-top: 10vh;
     width: $Sp-width;
     margin: 0 20px;
     font-family: 'butler';
     text-align: left;
+    overflow: hidden;
     hr{
       width: 1px;
       color: #000;
-      margin: 0;
     }
   h2{
       color: #000;

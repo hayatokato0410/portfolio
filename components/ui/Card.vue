@@ -13,9 +13,32 @@
   </ul>
 </template>
 <script>
+import { gsap } from "gsap"
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import axios from 'axios'
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
 export default {
-async asyncData() {
+  mounted() {
+    this.scrollWorkAnimationA()
+  },
+  methods: {
+    scrollWorkAnimationA() {
+      gsap.to('.workTitle', { // 動かしたい要素は".a"
+        'margin-bottom': '20px', // 右方向に500動く
+        duration: 0.2, // アニメーションは1秒間
+        scrollTrigger: {
+          trigger: '.workTitle', // 要素".a"がビューポートに入ったときにアニメーション開始
+          start: 'top 70%', // アニメーション開始位置
+          end: 'top 50%',
+          scrub: 0.2,
+          // markers: true // マーカー表示
+        }
+      })
+    }
+  },
+  async asyncData() {
     const { data } = await axios.get(
     'https://hayato_portfolio.microcms.io/api/v1/works/',
        {
