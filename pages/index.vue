@@ -9,9 +9,8 @@
       <div class="profile">
         <p>I am a web designer and developer.</p>
         <p>I work in Tokyo. I also take and edit photos and videos.</p>
-        <p>My goal is to build a better society through the power of design.</p>
       </div>
-      <div class="period">2020 - 2021</div>
+      <!-- <div class="period">2020 - 2021</div> -->
       <div class="arrow">
         <img src="~/assets/image/arrow.svg">
       </div>
@@ -31,7 +30,7 @@
           :key="content.id" />
       </div>
     </section>
-    <section class="contact">
+    <!-- <section class="contact">
       <h2>CONTACT</h2>
       <hr>
       <div class="contact_inner">
@@ -49,7 +48,7 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 </template>
 <script>
@@ -199,7 +198,7 @@ section{
     width: 60vw;
     margin-top: 10px;
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 18px;
     opacity: 0.6;
   }
   .period{

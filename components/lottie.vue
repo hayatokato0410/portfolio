@@ -17,11 +17,11 @@
     data () {
       return {
         style: {
-          width: this.width ? `${this.width}px` : '60vw',
+          width: this.width ? `${this.width}px` : '55vw',
           height: this.height ? `${this.height}px` : '100%',
           overflow: 'hidden',
           margin: '0 0',
-          'padding-top': '14vh'
+          'padding-top': '100px'
         }
       }
     },

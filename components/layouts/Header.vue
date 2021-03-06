@@ -1,5 +1,5 @@
 <template>
-    <header class="header">
+    <header class="header _show">
         <div class="logo">
             <nuxt-link to="/">HAYATO KATO</nuxt-link>
         </div>
@@ -21,6 +21,24 @@ async asyncData() {
     )
     return data
   },
+    mounted: function() {
+    var pos = 0;
+    $(window).on('scroll', function(){
+        if($(this).scrollTop() > 0.1 ){
+        if($(this).scrollTop() < pos ){
+            //上スクロール時に表示
+            $('.header').addClass('_show');
+        }else{
+            //下スクロール時に表示
+            $('.header').removeClass('_show');
+        }
+        } else {
+        $('.header').addClass('_show');
+        }
+        //スクロールが停止した位置を保持
+        pos = $(this).scrollTop();
+    });
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -29,12 +47,26 @@ async asyncData() {
     mix-blend-mode:difference;
     position: fixed;
     font-family: 'Inter';
-    width: $Sp-width;
+    width: 100vw;
     height: auto;
-    margin-left: 20px;
+    // margin-left: 20px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     color: white;
+    border-bottom: solid 1px white;
+    padding-bottom: 20px;
+    // background: $Bg-color;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    top: -100px;
+    left: 0;
+    transition: 0.3s ease-in-out;
+    &._show{
+        position: fixed;
+        top:0;
+        left: 0;
+    }
     .logo{
         margin-top: 20px;
         font-weight: 500;
