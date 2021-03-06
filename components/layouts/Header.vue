@@ -55,25 +55,26 @@ async asyncData() {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
-    top: 0px;
+    top: 0;
     left: 0;
     transition: 0.3s ease-in-out;
     color: white;
     mix-blend-mode: difference;
     border-bottom: solid 1px white;
+
     .logo{
-        margin-top: 20px;
-        font-weight: 500;
-        font-size: 12px;
+        margin-top: 22px;
+        font-size: 14px;
+        font-weight: bold;
     }
     .globalNavigation{
-        padding-top: 20px;
-        width: 28vw;
+        padding-top: 22px;
+        width: 36vw;
         height:auto;
         display: flex;
         justify-content: space-between;
         a{
-            font-size: 12px;
+            font-size: 14px;
             text-decoration: none;
         }
         .ellipse{
@@ -85,13 +86,13 @@ async asyncData() {
     }
 }
 .headerBg{
-    height: 54px;
+    height: 60px;
     width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
-    backdrop-filter:blur(3px);
-    -webkit-backdrop-filter:blur(3px);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
     z-index: 2;
 }
 

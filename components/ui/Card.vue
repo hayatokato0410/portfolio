@@ -8,6 +8,11 @@
         </div>
         <div class="workTitle_category">{{ category }}</div>
         <img class="thumbnail">
+        <!-- <img :src="image.url" alt=""> -->
+        <div class="workLink">
+          <p>view the work</p>
+          <img src="~/assets/image/arrow02.svg" alt="">
+        </div>
       </nuxt-link>
     </li>
   </ul>
@@ -68,7 +73,7 @@ export default {
 .workContainer{
   .workTitle{
     font-family: 'butler-Medium';
-    margin-top: 28px;
+    margin-top: 32px;
     border-bottom: 1px solid $Bg-color;
     padding-bottom: 40px;
     &_wrapper{
@@ -83,24 +88,41 @@ export default {
     &_number{
         font-size: 20px;
         font-family: 'butler-Light';
+        margin-bottom: 10px;
     }
     &_title{
         letter-spacing: 0.025em;
         font-size: 40px;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
     }
     &_category{
       color: $Bg-color;
       mix-blend-mode:difference;
-      font-family: 'butler-Light';
-      font-size: 16px;
-      letter-spacing: 0.02em;
+      font-family: 'Inter';
+      font-size: 14px;
     }
-    & img{
-      margin-top: 30px;
+    img{
+      margin-top: 32px;
       width: $Sp-width;
       height: 60vh;
-      background: white;
+      // background: white;
+    }
+  }
+  .workLink{
+    margin-top: 30px;
+    display: flex;
+    p{
+      color: white;
+      font-size: 16px;
+      letter-spacing: 0.04em;
+      font-family: 'Inter';
+    }
+    img{
+      width: 20px;
+      height: auto;
+      mix-blend-mode: difference;
+      margin: 0 0 0 16px;
+      transform: rotate( 45deg );
     }
   }
 }
