@@ -44,30 +44,28 @@ async asyncData() {
 <style lang="scss" scoped>
 .header{
     z-index: 10;
-    mix-blend-mode:difference;
     position: fixed;
     font-family: 'Inter';
     width: 100vw;
     height: auto;
-    // margin-left: 20px;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    color: white;
-    border-bottom: solid 1px white;
     padding-bottom: 20px;
-    // background: $Bg-color;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     top: -100px;
     left: 0;
     transition: 0.3s ease-in-out;
+    color: white;
+    mix-blend-mode: difference;
+    border-bottom: solid 1px white;
+    backdrop-filter: blur(12px);
     &._show{
         position: fixed;
         top:0;
         left: 0;
     }
     .logo{
+        color: white;
         margin-top: 20px;
         font-weight: 500;
         font-size: 12px;
