@@ -21,7 +21,7 @@
           height: this.height ? `${this.height}px` : '100%',
           overflow: 'hidden',
           margin: '0 0',
-          'padding-top': '100px'
+          'padding-top': '95px'
         }
       }
     },

@@ -69,7 +69,7 @@ async asyncData() {
     }
     .globalNavigation{
         padding-top: 22px;
-        width: 36vw;
+        width: 30vw;
         height:auto;
         display: flex;
         justify-content: space-between;

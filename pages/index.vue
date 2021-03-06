@@ -7,16 +7,18 @@
           <p class="fadeAnimation">HAYATO KATO</p>
       </h1> -->
       <div class="profile">
+        <p>I am a web designer and developer. I work in Tokyo. I also take and edit photos and videos.</p>
+        <!-- <p>I work in Tokyo.</p>
         <p>I am a web designer and developer.</p>
-        <p>I work in Tokyo. I also take and edit photos and videos.</p>
+        <p>I also take and edit photos and videos.</p> -->
       </div>
       <!-- <div class="period">2020 - 2021</div> -->
-      <div class="arrow">
+      <!-- <div class="arrow">
         <img src="~/assets/image/arrow.svg">
       </div>
       <div class="circle">
         <img src="~/assets/image/circle.svg">
-      </div>
+      </div> -->
     </section>
     <section class="work">
       <h2>work</h2>
@@ -194,11 +196,13 @@ section{
   //   padding-top: 12vh;
   // }
   .profile{
+    font-family: 'Inter';
+    font-weight: 500;
     // color: white;
-    width: 60vw;
-    margin-top: 10px;
-    line-height: 1.5;
-    font-size: 18px;
+    // width: 55vw;
+    margin-top: 4px;
+    line-height: 1.8;
+    font-size: 16px;
     opacity: 0.6;
   }
   .period{
