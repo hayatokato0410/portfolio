@@ -1,12 +1,15 @@
 <template>
-    <header class="header _show">
-        <div class="logo">
-            <nuxt-link to="/">HAYATO KATO</nuxt-link>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <nuxt-link to="/">HAYATO KATO</nuxt-link>
+            </div>
+            <nav class="globalNavigation">
+                <nuxt-link to="/">WORK</nuxt-link>
+                <nuxt-link to="/about">ABOUT</nuxt-link>
+            </nav>
         </div>
-        <nav class="globalNavigation">
-            <nuxt-link to="/">WORK</nuxt-link>
-            <nuxt-link to="/about">ABOUT</nuxt-link>
-        </nav>
+        <div class="headerBg"></div>
     </header>
 </template>
 <script>
@@ -52,18 +55,12 @@ async asyncData() {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
-    top: -100px;
+    top: 0px;
     left: 0;
     transition: 0.3s ease-in-out;
     color: white;
     mix-blend-mode: difference;
     border-bottom: solid 1px white;
-    backdrop-filter: blur(12px);
-    &._show{
-        position: fixed;
-        top:0;
-        left: 0;
-    }
     .logo{
         margin-top: 20px;
         font-weight: 500;
@@ -87,5 +84,16 @@ async asyncData() {
         }
     }
 }
+.headerBg{
+    height: 54px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter:blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    z-index: 2;
+}
+
 
 </style>
