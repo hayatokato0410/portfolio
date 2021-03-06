@@ -65,7 +65,6 @@ async asyncData() {
         left: 0;
     }
     .logo{
-        color: white;
         margin-top: 20px;
         font-weight: 500;
         font-size: 12px;
