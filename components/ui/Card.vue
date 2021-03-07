@@ -2,15 +2,16 @@
   <ul class="workContainer">
     <li class="workTitle">
       <nuxt-link :to="`/`">
+        <img class="thumbnail">
         <div class="workTitle_wrapper">
           <div class="workTitle_title">{{ title }}</div>
           <div class="workTitle_number">{{ number }}</div>
         </div>
-        <div class="workTitle_category">{{ category }}</div>
-        <img class="thumbnail">
+        <!-- <div class="workTitle_category">{{ category }}</div> -->
+        <!-- <img :src="image.url" alt=""> -->
         <!-- <img :src="image.url" alt=""> -->
         <div class="workLink">
-          <p>view the work</p>
+          <p>View the work</p>
           <img src="~/assets/image/arrow02.svg" alt="">
         </div>
       </nuxt-link>
@@ -74,8 +75,8 @@ export default {
   .workTitle{
     font-family: 'butler-Medium';
     margin-top: 32px;
-    border-bottom: 1px solid $Bg-color;
-    padding-bottom: 40px;
+    // border-bottom: 1px solid $Bg-color;
+    padding-bottom: 20px;
     &_wrapper{
       display: flex;
       width: $Sp-width;
@@ -87,10 +88,11 @@ export default {
     }
     &_number{
         font-size: 20px;
+        margin-top: 12px;
         font-family: 'butler-Light';
-        margin-bottom: 10px;
     }
     &_title{
+        margin-top: 28px;
         letter-spacing: 0.025em;
         font-size: 40px;
         margin-bottom: 12px;
@@ -102,15 +104,17 @@ export default {
       font-size: 14px;
     }
     img{
-      margin-top: 32px;
+      margin-top: 16px;
       width: $Sp-width;
       height: 60vh;
-      // background: white;
+      background: white;
     }
   }
   .workLink{
-    margin-top: 30px;
+    text-align: right;
+    margin-top: 4px;
     display: flex;
+    align-items: center;
     p{
       color: white;
       font-size: 16px;
@@ -118,11 +122,12 @@ export default {
       font-family: 'Inter';
     }
     img{
-      width: 20px;
+      width: 32px;
       height: auto;
       mix-blend-mode: difference;
-      margin: 0 0 0 16px;
+      margin: 0 0 0 12px;
       transform: rotate( 45deg );
+      background: none;
     }
   }
 }

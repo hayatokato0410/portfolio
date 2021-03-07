@@ -27,30 +27,21 @@
         <Card v-for="content in contents"
           :title="content.title"
           :number="content.number"
-          :image="content.image"
           :category="content.category"
           :key="content.id" />
       </div>
     </section>
-    <!-- <section class="contact">
+    <section class="contact">
       <h2>CONTACT</h2>
       <hr>
       <div class="contact_inner">
         <ul class="contactTitle">
-            <a href=""><li class="contactTitle__mail"><p>Mail</p><p><span>hayatokato0410@gmail.com</span></p></li></a>
-            <a href=""><li class="contactTitle__twitter"><p>Twitter</p><p><span>@hayatokato0410</span></p></li></a>
-            <a href=""><li class="contactTitle__instagram"><p>Instagram</p><p><span>@hayatokato0410</span></p></li></a>
+            <a href=""><li class="contactTitle__instagram"><p>Mail</p><img src="~/assets/image/arrow.svg" alt=""></li></a>
+            <a href=""><li class="contactTitle__twitter"><p>Twitter</p><img src="~/assets/image/arrow.svg" alt=""></li></a>
+            <a href=""><li class="contactTitle__instagram"><p>Instagram</p><img src="~/assets/image/arrow.svg" alt=""></li></a>
         </ul>
-        <div class="marquee-wrap">
-          <ul class="marquee-list">
-            <li class="marquee-item">Get in Touch</li>
-          </ul>
-          <ul class="marquee-list_2">
-            <li class="marquee-item">Get in Touch</li>
-          </ul>
-        </div>
       </div>
-    </section> -->
+    </section>
   </main>
 </template>
 <script>
@@ -123,7 +114,7 @@ export default {
         duration: 0.75,
         scrollTrigger: {
           trigger: '.work hr',
-          start: 'top 90%',
+          start: 'top 80%',
           // end: 'top 50%',
           // scrub: 1,
           // markers: true
@@ -254,10 +245,11 @@ section{
 }
 .contact{
     color: #000;
-    min-height: 60vh;
+    min-height: 70vh;
     width: $Sp-width;
     margin: 0 20px;
-    font-family: 'butler';
+    font-family: 'Inter';
+    font-weight: 400;
     text-align: left;
     overflow: hidden;
     hr{
@@ -268,93 +260,31 @@ section{
       color: #000;
     }
   .contactTitle{
+    margin-top: 32px;
     li{
-      font-size: 32px;
-      border-bottom: 1px solid #000;
-      margin-top: 32px;
-      padding-bottom: 24px;
+      font-size: 20px;
+      padding-bottom:24px;
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
       width: $Sp-width;
       height: auto;
+      align-items: center;
+      p{
+        margin-right: 12px;
+      }
+      img{
+        width: 7px;
+        transform: rotate( -125deg );
+        margin: 4px 0 0 0 ;
+        opacity: 0.6;
+        }
       span{
-        font-size: 16px;
+        font-size: 22px;
+        text-decoration : underline;
+        font-weight: bold;
       }
     }
   }
-  @keyframes animation-marquee {
-  0% {
-    transform: translate(0%);
-  }
-  100% {
-    transform: translate(-100%);
-  }
-}
-@-webkit-keyframes animation-marquee {
-  0% {
-    transform: translate(0%);
-  }
-  100% {
-    transform: translate(-100%);
-  }
-}
-@mixin marquee {
-  animation-name: animation-marquee;
-  animation-duration: 16s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-}
-@mixin marquee_2 {
-  animation-name: animation-marquee;
-  animation-duration: 16s;
-  animation-timing-function: linear;
-  animation-delay: 8s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-}
 
-.marquee-wrap {
-  // background: #232323;
-  margin: 28px 0 0 0;
-  height: 120px;
-  overflow: hidden;
-  position: relative;
-  color: #000;
-  border-bottom: 1px solid #000;
-    .marquee-list {
-      white-space: nowrap;
-      position: absolute;
-      @include marquee;
-        .marquee-item {
-          font-family: 'butler-Light';
-          display: inline;
-          white-space: nowrap;
-          font-weight: lighter;
-          font-size: 80px;
-          padding: 0 80px 0 0;
-             &:first-child {
-              padding-left:calc(100vw + 40px);
-            }
-        }
-    }
-    .marquee-list_2 {
-      white-space: nowrap;
-      position: absolute;
-      @include marquee_2;
-        .marquee-item {
-          font-family: 'butler-Light';
-          display: inline;
-          white-space: nowrap;
-          font-weight: lighter;
-          font-size: 80px;
-          padding: 0 80px 0 0;
-            &:first-child {
-              padding-left:calc(100vw + 40px);
-            }
-        }
-    }
-  }
 }
 </style>
